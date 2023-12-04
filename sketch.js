@@ -1,15 +1,17 @@
-let pendulo;
-let angulo = Math.PI / 4;
-let longitud = 150;
+let t = 0; // Tiempo inicial
+let dt = 0.01; // Incremento de tiempo
 
 function setup() {
   createCanvas(400, 400);
-  pendulo = new Pendulo(width / 2, 0, longitud);
 }
 
 function draw() {
   background(255);
 
-  pendulo.update();
+  let angle = (Math.PI / 4) * cos(1.39 * t); // Calcular el ángulo en función del tiempo
+
+  let pendulo = new Pendulo(width / 2, 0, 150, angle, color(255, 0, 0));
   pendulo.display();
+
+  t += dt; // Incrementar el tiempo
 }
