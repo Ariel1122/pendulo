@@ -20,7 +20,7 @@ class Pendulo {
     let position = createVector(x, y);
     position.add(this.origin);
 
-    stroke(0);
+    stroke(0, 70);
     strokeWeight(2);
     line(this.origin.x, this.origin.y, position.x, position.y);
 
